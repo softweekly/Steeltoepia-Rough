@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SteelToepia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    h1 {font-size: 145px;}
+    body {
+      padding-left: 0px; /* No padding needed now */
+      margin: 0; /* Remove default margin */
+    }
+    .hero-header {
+      padding: 10px;
+      margin-bottom: 5px;
+      position: relative;
+      z-index: 2;
+    }
+    .featured-content {
+      margin-top: 20px;
+    }
+    .featured-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+    }
+    .featured-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .margin-video {
+      position: fixed;
+      top: 20%;
+      right: 10px;
+      width: 200px;
+      height: 150px;
+      background-color: #333;
+      padding: 10px;
+      z-index: 10;
+      display: none; /* Hidden by default */
+    }
+    .margin-video iframe {
+      width: 100%;
+      height: 100%;
+    }
+    hr {
+      border: 4px solid #333;
+    }
+    .navbar {
+      background-color: #333;
+    }
+    .navbar a {
+      color: orange !important; /* Make navbar text orange */
+    }
+    .row-padding {
+      padding-bottom: 20px; /* Add bottom padding to rows */
+    }
+    .equal-height {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .equal-height .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .equal-height .card-body {
+      flex: 1;
+    }
+       /* Add styles for the link */
+       .card-title a {
+      color: black; /* Inherit color from parent */
+      text-decoration: none; /* Remove underline */
+    }
+    .card-title a:hover {
+      color: orange; /* Change color on hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header class="hero-header">
+                   <!-- Insert the banner here -->
+                   <div class="banner">
+                    <div class="background"> 
+                      <video autoplay muted loop>
+                      <source src="Media bulk/BB Short Music.mp4" type="video/mp4">
+                    </video>
+                    </div>
+                    <div class="slider" style="--quantity: 10">
+                        <div class="item" style="--position: 1"><video src="Photos/Cit M.mp4" autoplay loop muted></video></div>
+                        <div class="item" style="--position: 2"><img src="Photos/Aaron2.jpg" alt=""></div>
+                        <div class="item" style="--position: 3"><video src="Photos/Melton.mp4" autoplay loop muted></video></div>
+                        <div class="item" style="--position: 4"><img src="Photos/Aaron4.png" alt=""></div>
+                        <div class="item" style="--position: 5"><video src="Photos/cartoon.mp4" autoplay loop muted></video></div>
+                        <div class="item" style="--position: 6"><img src="Photos/Aaron6.png" alt=""></div>
+                        <div class="item" style="--position: 7"><video src="Media bulk/Softcard.mp4" autoplay loop muted></video></div>
+                        <div class="item" style="--position: 8"><img src="Photos/Aaron8.jpg" alt=""></div>
+                        <div class="item" style="--position: 9"><video src="Photos/Blade.mp4" autoplay loop muted></video></div>
+                        <div class="item" style="--position: 10"><img src="Photos/Aaron10.png" alt=""></div>
+                    </div>
+                    <div class="content">
+                        <h1>STEELTOEPIA</h1>
+                        <div class="author">
+                            <h3>All Toe All the Time</h3>
+                        </div>
+                        <div class="model"></div>
+                    </div>
+                </div>
+
+
+                
+  </header>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+    <div class="container">
+      <a class="navbar-brand" href="#"><h3>SteelToepia</h3></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="latest.html">The Latest</a></li>
+          <li class="nav-item"><a class="nav-link" href="indexWhoa.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="chat.html">Chat</a></li>
+          <li class="nav-item"><a class="nav-link" href="clippers.html">Clippers</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More Pages
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="indexWhoa.html">Page 1</a></li>
+              <li><a class="dropdown-item" href="Page2.html">DOOM</a></li>
+              <li><a class="dropdown-item" href="Page3.html">Page 3</a></li>
+              <li><a class="dropdown-item" href="Page4.html">Page 4</a></li>
+              <li><a class="dropdown-item" href="Page5.html">Page 5</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Left Margin Video (hidden by default) -->
+  <div class="margin-video" id="margin-video">
+    <iframe id="video-player" src="" allowfullscreen></iframe>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mt-4">
+    <!-- Featured Content Section -->
+    <div class="row featured-content">
+      <!-- Text Column -->
+      <div class="col-md-6">
+        <h5>Another Anniversary Toe</h5>
+        <p>Check out this special content! Learn more about the topics we discuss on of show. Venmo PayPal Superchats, Rumble Rants. $325 away from todays goal</p>
+        <p>Lets all chip in and make this Another win for the Toe</p>
+      </div>
+      <!-- Video Column -->
+      <div class="col-md-6">
+        <div class="featured-video">
+          <iframe src="https://www.youtube.com/embed/aIE3xa3-osM" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Episodes Section -->
+    <div class="row">
+      <hr>    <!-- Divider -->
+      <h4>Latest Shows</h4>
+      <!-- Episode 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <h5 class="card-title">NLO</h5>
+          <video class="card-img-top" controls>
+            <source src="Rick.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body">
+            
+            <p class="card-text">The giant of generalities. The hunchback of humor. Mr. "every man" himself. Patrick Melton.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Episode 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <h5 class="card-title">Great Song</h5>
+          <video class="card-img-top" controls>
+            <source src="Media bulk/The Black Keys - Just Got to Be [Official Video].mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body">
+            
+            <p class="card-text">A deep dive into creativity and inspiration.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Episode 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <h5 class="card-title">Winning</h5>
+          <video class="card-img-top" controls>
+            <source src="CHARLIE SHEEN - WINNING.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body">
+           
+            <p class="card-text">Exploring the latest trends in podcasting!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+    <!-- Video Library Section -->
+    <div class="row">
+      <h4>Clippers</h4>
+      <hr>    <!-- Divider -->
+      
+            <!-- Video 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <h5 class="card-title"><a href="Page2.html">DOOM</a></h5>
+          <iframe class="card-img-top" width="100%" height="315" src="https://www.youtube.com/embed/Sw1YAqKVO1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+          <div class="card-body">
+            
+            <p class="card-text">First rate clipper and great American and/or Canadian</p>
+          </div>
+        </div>
+      </div>
+      <!-- Video 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <h5 class="card-title">Stallyn19</h5>
+          <iframe class="card-img-top" width="100%" height="315" src="https://www.youtube.com/embed/rj5aQ4d84Ek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+          <div class="card-body">
+            
+            <p class="card-text">Better than the first 18 Stallyns. The were mostly NPCs</p>
+          </div>
+        </div>
+      </div>
+      <!-- Video 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <h5 class="card-title">Citizen M</h5>
+          <iframe class="card-img-top" width="100%" height="315" src="https://www.youtube.com/embed/Sw1YAqKVO1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          <div class="card-body">
+            <p class="card-text">A preview of what’s coming next on our podcast!</p>
+          </div>
+        </div>
+      </div>
+          <!-- Video 4 -->
+          <div class="col-md-4">
+            <div class="card">
+              <h5 class="card-title">Coach Toe Clips</h5>
+              <iframe class="card-img-top" width="100%" height="315" src="https://www.youtube.com/embed/Sw1YAqKVO1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <div class="card-body">
+                
+                <p class="card-text">An exciting video about our behind-the-scenes process.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Video 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <h5 class="card-title">TuscanSam</h5>
+              <iframe class="card-img-top" width="100%" height="315" src="https://www.youtube.com/embed/Sw1YAqKVO1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <div class="card-body">
+                
+                <p class="card-text">A video showcasing our latest podcast topics.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Video 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <h5 class="card-title">Random</h5>
+              <iframe class="card-img-top" width="100%" height="315" src="https://www.youtube.com/embed/Sw1YAqKVO1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              
+              <div class="card-body">
+                <p class="card-text">A preview of what’s coming next on our podcast!</p>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to play video in the margin container
+    function playVideo(videoPath) {
+      const videoPlayer = document.getElementById("video-player");
+      const marginVideo = document.getElementById("margin-video");
+      videoPlayer.src = videoPath;
+      marginVideo.style.display = "block"; // Show the video player in the margins
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
